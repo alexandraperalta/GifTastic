@@ -1,0 +1,31 @@
+    .rating {
+        float: left;
+        position: absolute;
+    }
+
+    .imageDiv {
+        float: left;
+        margin: 10px;
+    }
+
+    .clicked {
+        background-color: #62929e;
+        border-color: #62929e;
+        filter: brightness(65%);
+        box-shadow: none;
+        -webkit-box-shadow: none;
+        border-style: solid;
+        outline: none;
+    }
+
+    #newFeel {
+        width: 82%;
+        float: left
+    }
+
+    #submit-new-feel {
+        float: right
+    }
+    .btnFeel{
+        margin: 5px;
+    }

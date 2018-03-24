@@ -57,6 +57,15 @@ function populateButtons(){
                         "id": reaction + "Panel",
                         "class" : "panel panel-danger"
                     });
+                    //create a panel header for this reaction and append
+                    var panelHeader = $("<div>");
+                    panelHeader.html("<h3 class='panel-title'>"+reaction+"</h3>");
+                    panelHeader.addClass("panel-heading")
+                    feelPanel.append(panelHeader);
+                    //create a panel body
+                    var panelBody = $("<div>");
+                    panelBody.addClass("panel-body");
+                    feelPanel.append(panelBody);
                     // Looping through each result item (each gif)
                     for (var i = 0; i < results.length; i++) {
                         // Creating and storing a div tag
@@ -79,7 +88,7 @@ function populateButtons(){
                         reactionDiv.append(reactionImage, ratingLabel);
                         // Prependng the reactionDiv to the HTML page in the feel panel then to
                         // "#gifs-appear-here" div
-                        feelPanel.append(reactionDiv);
+                        panelBody.append(reactionDiv);
                         $("#gifs-appear-here").prepend(feelPanel);
                     }
                 });
